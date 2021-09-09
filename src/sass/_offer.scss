@@ -1,0 +1,106 @@
+@import 'colors';
+
+.offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 6em;
+    margin-bottom: 5em;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 4rem;
+        color: $titleColor;
+        margin-top: 1.5em;
+        font-weight: 400;
+    }
+
+    &__hello {
+        color: $fontColor;
+        font-size: 2.5rem;
+        margin: 2em auto;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 90%;
+
+        &--card {
+            height: 45em;
+            width: 35em;
+
+            .card {
+                border-radius: 8px;
+                box-shadow: 0 0 5px rgb(71, 71, 71);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                height: 90%;
+                color: $fontColor;
+
+                &__title {
+                    padding-top: 0.5em;
+                    font-size: 3.5rem;
+                    font-weight: 400;
+                }
+
+                p {
+                    font-size: 1.8rem;
+                }
+
+                .offer__option {
+                    font-size: 4.2rem;
+
+                    color: $titleColor;
+
+                    &--in {
+                        line-height: 2em;
+
+                        span {
+                            color: lime;
+                        }
+                    }
+
+                    &--out {
+                        line-height: 2em;
+                        color: gray;
+                    }
+                }
+
+                button {
+                    cursor: pointer;
+                    padding: 0.7em;
+                    background: none;
+                    outline: none;
+                    font-size: 1.7rem;
+                    border-radius: 8px;
+                    color: $fontColor;
+                    width: 60%;
+                    box-shadow: 1px 1px 10px black;
+                    border: none;
+                    margin: 1.5em auto;
+                }
+
+                .best {
+                    background: #2ade72;
+                    border: none;
+                    box-shadow: 1px 1px 10px #2beb78;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .offer {
+        &__hello {
+            text-align: center;
+        }
+    }
+
+
+}
